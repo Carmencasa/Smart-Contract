@@ -1,0 +1,12 @@
+async function connect() {
+  if (window.ethereum) {
+    try {
+      await window.ethereum.request({ method: 'eth_requestAccounts' });
+      alert("Wallet connected!");
+    } catch (error) {
+      console.error(error);
+    }
+  } else {
+    alert("Install Metamask to use this app.");
+  }
+}
