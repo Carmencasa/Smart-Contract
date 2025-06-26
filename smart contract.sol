@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.20;
 
 contract transaction() {
@@ -8,7 +9,7 @@ contract transaction() {
     }
 
     function transfer(address to, uint amount) public {
-        require(amount > 0; "Sufficient import");
+        require(amount > 0; "Insufficient import");
         require(balances[msg.sender] >= amount, "Insufficient funds");
         require(to != address(0), "Unknown address");
 
